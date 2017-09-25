@@ -17,6 +17,14 @@
                 <action android:name="android.intent.action.VIEW" />
                 <data android:scheme="geo" />
                 <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MapActivity">
+            <intent-filter>
+                <action android:name="com.google.android.intent.action.WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
     </application>

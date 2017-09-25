@@ -2,4 +2,9 @@
 <resources>
     <string name="app_name">Lab4</string>
     <string name="country">France</string>
+    <string name="Location">Lieu</string>
+    <string name="Search">Chercher</string>
+    <string name="noData">String is empty</string>
+    <string name="SearchMaps">Search Maps</string>
+    <string name="SearchGoogle">Search Google</string>
 </resources>

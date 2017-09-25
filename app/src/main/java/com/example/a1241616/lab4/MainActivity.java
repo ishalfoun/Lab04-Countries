@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,16 +16,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void showMap(View v) {
 
-       // Uri   myUri1 = Uri.parse("geo:45.489374,-73.588298?q=" + Uri.encode("3040 Sherbrooke St ndW"));
-        Uri   myUri2 = Uri.parse("geo:0,0?q=" + Uri.encode(getString(R.string.country)));
-        //String s = getString(R.string.country);
+    public void launchActivity2(View view) {
+        Intent i = new Intent(this, MapActivity.class);
 
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(myUri2);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        logIt(getString(R.string.country));
+        i.putExtra("DATA1", getString(R.string.country));
+        startActivity(i);
+
     }
+
+    public static void logIt(String msg) {
+        final String TAG = "INTDATA1";
+        Log.d(TAG, msg);
+    }
+
 }
